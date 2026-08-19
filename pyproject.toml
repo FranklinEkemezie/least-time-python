@@ -5,12 +5,14 @@ description = "An interactive visualization of least-time paths and Snell's law.
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "manim>=0.18.1",
     "numpy>=1.26",
     "plotly>=5.20",
     "scipy>=1.12",
     "streamlit>=1.32",
 ]
+
+[project.optional-dependencies]
+animation = ["manim>=0.18.1"]
 
 [project.scripts]
 least-time-native = "least_time.native_ui.desktop:main"

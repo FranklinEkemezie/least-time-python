@@ -10,7 +10,7 @@ Requires Python 3.11 or newer and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv venv
-uv sync --dev
+uv sync --dev --extra animation
 ```
 
 Activate the environment if desired:
@@ -47,7 +47,7 @@ uv run pytest
 Render the explanatory animation:
 
 ```bash
-uv run manim -pqh src/least_time/manim_scenes/least_time_scene.py LeastTimeScene
+uv run --extra animation manim -pqh src/least_time/manim_scenes/least_time_scene.py LeastTimeScene
 ```
 
 The Streamlit app looks for rendered video files under `media/`. Manim's output is intentionally ignored by Git; after rendering, the app's Manim Animation tab will embed the available MP4.
